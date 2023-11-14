@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-column: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: linear-gradient(45deg, #0c7ed4, #2198f2, #51aef5);
+}
+
+body {
+  background: #121212;
+  color: #fff;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}/*# sourceMappingURL=main.css.map */
