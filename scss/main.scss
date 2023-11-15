@@ -1,37 +1,47 @@
 $background-col: #121212;
+$secondary-background-col: #272727;
 $primary-col: #2198f2;
-$gradient: linear-gradient(45deg, darken($primary-col, 10%), $primary-col, lighten($primary-col, 10%));
+$gradient: linear-gradient(45deg, darken($primary-col, 20%), lighten($primary-col, 20%));
 
 .grid-container {
     display:grid;
-    grid-column: repeat(3,1fr);
-    grid-template-columns: repeat(3, 1fr);
-    background-color: $gradient;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 15vh 81vh 4vh;
+    grid-template-areas:    "nav nav header header header header header header header header header header"
+                            "nav nav main main main main main main main main main main"
+                            "nav nav footer footer footer footer footer footer footer footer footer footer"
+
+}
+
+html,body {
+    margin:0;
+    padding: 0;
+    height:100vh
 }
 
 body {
     background:$background-col;
-    color: #fff;
+    color: black;
+    text-align: center;
 }
 
 header {
     grid-area: header;
+    background:$secondary-background-col;
 }
 
 nav {
     grid-area: nav;
+    background: $gradient;
 }
 
 main {
     grid-area: main;
 }
 
-aside {
-    grid-area: aside;
-}
-
 footer {
     grid-area: footer;
+    background-color: red;
 }
 
 
