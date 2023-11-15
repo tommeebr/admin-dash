@@ -3,7 +3,7 @@ $secondary-background-col: #272727;
 $primary-col: #2198f2;
 $gradient: linear-gradient(45deg, darken($primary-col, 20%), lighten($primary-col, 20%));
 
-.grid-container {
+.body-container {
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: 15vh 81vh 4vh;
@@ -28,6 +28,7 @@ body {
 header {
     grid-area: header;
     background:$secondary-background-col;
+    box-shadow: 0px 5px 10px $primary-col;
 }
 
 nav {
@@ -41,7 +42,28 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: red;
+    background-color: $secondary-background-col;
 }
 
+.main-container {
+    display: grid;
+    grid-template-columns: 72.5% 27.5%;
+    grid-auto-rows: auto;
+    grid-template-areas: "channels announcement"
+                         "channels message";
+}
 
+.channels {
+    grid-area: channels;
+    background: yellow;
+}
+
+.announcements {
+    grid-area: announcement;
+    background: red;
+}
+
+.messages {
+    grid-area: message;
+    background: green;
+}
